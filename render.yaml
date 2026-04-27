@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: token-launcher-bot
+    runtime: python
+    plan: standard
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PORT
+        value: 10000
+      - key: RENDER_EXTERNAL_URL
+        fromService:
+          name: token-launcher-bot
+          type: web
+          property: url
+      - key: SEED_PHRASE
+        sync: false
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: JUPITER_API_KEY
+        sync: false
+      - key: HELIUS_API_KEY
+        sync: false
