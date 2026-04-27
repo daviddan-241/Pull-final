@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Get token DIRECTLY from env
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+TELEGRAM_TOKEN = os.getenv("8722680516:AAGZNcMeQSi9hwXRDNOyaDtKDJLVPYDsOo0")
 TOKEN_NAME = os.getenv("TOKEN_NAME", "MyToken")
 TOKEN_SYMBOL = os.getenv("TOKEN_SYMBOL", "MTK")
 TOKEN_DECIMALS = int(os.getenv("TOKEN_DECIMALS", "9"))
