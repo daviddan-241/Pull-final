@@ -1,11 +1,5 @@
 # Now create the COMPLETE app.py with real volume bot, auto profit from holders, and $5 budget calc
 
-app_py = '''"""
-Multi-Chain Token Launcher Bot - PUMP.FUN + REAL VOLUME EDITION
-Create tokens for FREE, generate real volume with $5, monitor holders, auto-calculate profit.
-
-Required env vars: TELEGRAM_TOKEN, SEED_PHRASE
-"""
 import os
 import asyncio
 import logging
