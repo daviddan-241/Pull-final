@@ -778,7 +778,3 @@ _start_bot_once()
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 10000))
     app.run(host="0.0.0.0", port=port, threaded=True, use_reloader=False)
-'''
-
-with open('/mnt/agents/output/app.py', 'w') as f:
-    f.write(app_py)
