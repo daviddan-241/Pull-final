@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: token-launcher-bot
+    runtime: python
+    plan: standard
+    buildCommand: pip install -r requirements.txt
+    # Start bot.py (polling) in background, then Flask (keep-alive) in foreground
+    startCommand: >
+      python bot.py &
+      gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PORT
+        value: 10000
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: SEED_PHRASE
+        sync: false
+      - key: JUPITER_API_KEY
+        sync: false
+      - key: HELIUS_API_KEY
+        sync: false
