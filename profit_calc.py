@@ -1,11 +1,6 @@
 #
 # First, update profit_calc.py with auto-calculation from holder data
 
-profit_calc_py = '''"""
-Real profit calculator using AMM constant-product math.
-Includes auto-calculation from holder count and trade data.
-"""
-
 
 def calculate_rug_profit(
     creator_allocation_pct: float = 90.0,
@@ -266,7 +261,3 @@ def format_pumpfun_5dollar_report(calc: dict, buyer_count: int, avg_buy: float) 
 
 🏆 *ROI: INFINITE (you put $0)*
 """
-'''
-
-with open('/mnt/agents/output/profit_calc.py', 'w') as f:
-    f.write(profit_calc_py)
