@@ -1,4 +1,4 @@
-
+#
 # First, update profit_calc.py with auto-calculation from holder data
 
 profit_calc_py = '''"""
@@ -270,9 +270,3 @@ def format_pumpfun_5dollar_report(calc: dict, buyer_count: int, avg_buy: float) 
 
 with open('/mnt/agents/output/profit_calc.py', 'w') as f:
     f.write(profit_calc_py)
-
-print("✅ profit_calc.py updated with:")
-print("   • calculate_from_holders() - auto from holder count")
-print("   • format_holder_profit_report() - auto report")
-print("   • calculate_5_dollar_pumpfun() - $0 budget special")
-print("   • format_pumpfun_5dollar_report() - $0 report")
